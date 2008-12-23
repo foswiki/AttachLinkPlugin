@@ -20,7 +20,7 @@
 #
 # For licensing info read LICENSE file in the TWiki root.
 
-package TWiki::Plugins::AttachLinkPlugin;
+package Foswiki::Plugins::AttachLinkPlugin;
 
 use strict;
 
@@ -34,13 +34,13 @@ sub initPlugin {
   my ($baseTopic, $baseWeb) = @_;
 
   # check for Plugins.pm versions
-  if( $TWiki::Plugins::VERSION < 1.026 ) {
-    TWiki::Func::writeWarning( "Version mismatch between AttachLinkPlugin and Plugins.pm" );
+  if( $Foswiki::Plugins::VERSION < 1.026 ) {
+    Foswiki::Func::writeWarning( "Version mismatch between AttachLinkPlugin and Plugins.pm" );
     return 0;
   }
 
   # register the tag handlers
-  TWiki::Func::registerTagHandler( 'ATTACHMENT', \&_ATT);
+  Foswiki::Func::registerTagHandler( 'ATTACHMENT', \&_ATT);
 
   # Plugin correctly initialized
   return 1;
@@ -58,7 +58,7 @@ sub _ATT {
     my($session, $params, $theTopic, $theWeb) = @_;
     # $session  - a reference to the TWiki session object (if you don't know
     #             what this is, just ignore it)
-    # $params=  - a reference to a TWiki::Attrs object containing parameters.
+    # $params=  - a reference to a Foswiki::Attrs object containing parameters.
     #             This can be used as a simple hash that maps parameter names
     #             to values, with _DEFAULT being the name for the default
     #             parameter.
@@ -67,7 +67,7 @@ sub _ATT {
     # Return: the result of processing the tag
 
     my $attName = $params->{name} || $params->{_DEFAULT};
-    my $path = TWiki::Func::getPubUrlPath();
+    my $path = Foswiki::Func::getPubUrlPath();
     my $attTopic = $params->{topic} || $theTopic;
     my $attWeb = $params->{web} || $theWeb;
     my $label = $params->{label};
