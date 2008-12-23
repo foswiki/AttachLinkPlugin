@@ -7,5 +7,5 @@ BEGIN {
 }
 use Foswiki::Contrib::Build;
 
-my $build = new Foswiki::Contrib::Build("ThumbnailPlugin");
+my $build = new Foswiki::Contrib::Build("AttachLinkPlugin");
 $build->build($build->{target});
