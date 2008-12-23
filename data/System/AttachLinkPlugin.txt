@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="X509_2fC_3dUS_2fST_3dMassachusetts_2fL_3dSouthborough_2fO_3dlitts_2enet_2fOU_3dLitt_20family_2fOU_3dNetwork_20Administration_2fCN_3dTimothe_20Litt_2femailAddress_3dtimothe_40litts_2enet" date="1229834548" format="1.1" reprev="1.1" version="1.1"}%
+%META:TOPICINFO{author="ProjectContributor" date="1229834548" format="1.1"  version="1.1"}%
 ---+ %TOPIC%
 
 _Standard links to attachments_ 
@@ -37,46 +37,43 @@ Enjoy it as much as I do.
 
 Plugin settings are stored as preferences variables. To reference a plugin setting write *%&lt;nop&gt;&lt;plugin&gt;_&lt;setting&gt;%*, i.e. *%&lt;nop&gt;NEWPLUGIN_SHORTDESCRIPTION%*
 
-   * One line description, is shown in the %TWIKIWEB%.TextFormattingRules topic: 
+   * One line description, is shown in the %SYSTEMWEB%.TextFormattingRules topic: 
       * Set SHORTDESCRIPTION = Painless links to attachments 
 
    * There are no other settings for this plugin. 
 ---++ Plugin Installation Instructions
 
-__Note:__ You do not need to install anything on the browser to use this plugin. The following instructions are for the administrator who installs the plugin on the TWiki server.
+__Note:__ You do not need to install anything on the browser to use this plugin. The following instructions are for the administrator who installs the plugin on the Foswiki server.
 
    * Download the ZIP file from the Plugin Home (see below)
-   * Unzip *%TOPIC%.zip* in your twiki installation directory. Content:
+   * Unzip *%TOPIC%.zip* in your Foswiki installation directory. Content:
 
 | *File:* | *Description:* |
-| ==data/TWiki/%TOPIC%.txt== | Plugin topic |
-| ==data/TWiki/%TOPIC%.txt,v== | Plugin topic repository |
-| ==lib/TWiki/Plugins/%TOPIC%.pm== | Plugin Perl module |
+| ==data/System/%TOPIC%.txt== | Plugin topic |
+| ==data/System/%TOPIC%.txt,v== | Plugin topic repository |
+| ==lib/Foswiki/Plugins/%TOPIC%.pm== | Plugin Perl module |
    * Configure the Plugin: 
-      * TWiki 4.0 and up: Run the [[%SCRIPTURL%/configure%SCRIPTSUFFIX%][configure]] script to enable the Plugin
+      * Run the [[%SCRIPTURL%/configure%SCRIPTSUFFIX%][configure]] script to enable the Plugin
       * Change the Plugin settings as needed
    * Test if the installation was successful: 
       * _enter samples here_
 
 ---++ Plugin Info
 
-| Plugin Author: | TWiki:Main.TimotheLitt |
-| Copyright: | © 2007, TWiki:Main.TimotheLitt |
+| Plugin Author: | Foswiki:Main.TimotheLitt |
+| Copyright: | © 2007, Foswiki:Main.TimotheLitt |
 | License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
-| Plugin Version: | 21 Dec 2008 (V1.000) |
+| Plugin Version: | 21 Dec 2008 (V1.001) |
 | Change History: | &lt;!-- versions below in reverse order --&gt; |
-| 20 Dec 2008: | Initial version |
-| TWiki Dependency: | $TWiki::Plugins::VERSION 1.1 |
+|  23 Dec 2008: | V1.001 - Foswiki version by Kenneth Lavrsen |
+|  20 Dec 2008: | V1.000 - Initial version |
+| Dependency: | $Foswiki::Plugins::VERSION 1.1 |
 | CPAN Dependencies: | none |
 | Other Dependencies: | none |
 | Perl Version: | 5.005 |
-| [[TWiki:Plugins/Benchmark][Benchmarks]]: | %TWIKIWEB%.GoodStyle nn%, %TWIKIWEB%.FormattedSearch nn%, %TOPIC% nn% |
-| Plugin Home: | http://TWiki.org/cgi-bin/view/Plugins/%TOPIC% |
-| Feedback: | http://TWiki.org/cgi-bin/view/Plugins/%TOPIC%Dev |
-| Appraisal: | http://TWiki.org/cgi-bin/view/Plugins/%TOPIC%Appraisal |
+| Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
+| Feedback: | http://foswiki.org/Extensions/%TOPIC%Dev |
 
-__Related Topics:__ %TWIKIWEB%.TWikiPlugins, %TWIKIWEB%.DeveloperDocumentationCategory, %TWIKIWEB%.AdminDocumentationCategory, %TWIKIWEB%.TWikiPreferences
-
-<br />%TOPICCREATE{ template="Plugins.PluginDevTemplate" topic="AttachLinkPluginDev" disable="NewPluginTemplate" parameters="pluginName=AttachLinkPlugin&RelatedTopics=AttachLinkPlugin, AttachLinkPluginAppraisal" }% %TOPICCREATE{ template="Plugins.PluginAppraisalTemplate" topic="AttachLinkPluginAppraisal" disable="NewPluginTemplate" parameters="RelatedTopics=AttachLinkPlugin, AttachLinkPluginDev" }% -- TWiki:Main.TimotheLitt - 21 Dec 2008
+__Related Topics:__ [[%SYSTEMWEB%.Plugins][Plugins]], %SYSTEMWEB%.DeveloperDocumentationCategory, %SYSTEMWEB%.AdminDocumentationCategory, %SYSTEMWEB%.SitePreferences
 
 -- Main.TimotheLitt - 21 Dec 2008

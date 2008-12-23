@@ -1,10 +1,10 @@
-# Plugin for TWiki Enterprise Collaboration Platform, http://TWiki.org/
+# Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/ 
 #
 # Copyright (C) 2000-2003 Andrea Sterbini, a.sterbini@flashnet.it
 # Copyright (C) 2006 Meredith Lesly, msnomer@spamcop.net
 # Copyright (C) 2008 Timothe Litt, litt@acm.ort
 #
-# and TWiki Contributors. All Rights Reserved. TWiki Contributors
+# and Foswiki Contributors. All Rights Reserved. Foswiki Contributors
 # are listed in the AUTHORS file in the root of this distribution.
 # NOTE: Please extend that file, not this notice.
 #
@@ -18,7 +18,7 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #
-# For licensing info read LICENSE file in the TWiki root.
+# For licensing info read LICENSE file in the Foswiki root.
 
 package Foswiki::Plugins::AttachLinkPlugin;
 
@@ -56,7 +56,7 @@ sub initPlugin {
 
 sub _ATT {
     my($session, $params, $theTopic, $theWeb) = @_;
-    # $session  - a reference to the TWiki session object (if you don't know
+    # $session  - a reference to the Foswiki session object (if you don't know
     #             what this is, just ignore it)
     # $params=  - a reference to a Foswiki::Attrs object containing parameters.
     #             This can be used as a simple hash that maps parameter names
@@ -75,9 +75,9 @@ sub _ATT {
     my $txt = "<a href='$path/$attWeb/$attTopic/$attName'>";
 
     if( $label ) {
-	$txt .= $label;
+        $txt .= $label;
     } else {
-	$txt .= $attName;
+        $txt .= $attName;
     }
     $txt .= '</a>';
 
